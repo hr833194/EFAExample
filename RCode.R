@@ -23,17 +23,17 @@ sink(file = NULL)
 
 # Parallel Analysis
 sink(file = "C:/Users/heraa/Documents/University/Doctoral Directed Studies/Guest Lecture/Factor Analysis/ParallelAnalysis.txt")
-paran(efadataset[, -c(1, 2, 3, 4, 5)], cfa=TRUE, graph=TRUE, 
+paran(efadataset, cfa=TRUE, graph=TRUE, 
       color=TRUE, col=c("black","red","blue"))
 sink(file = NULL)
 
 # Scree Plot
-nofactors = fa.parallel(efadataset[, -c(1, 2, 3, 4, 5)], fm="pa", fa="fa")
+nofactors = fa.parallel(efadataset, fm="pa", fa="fa")
 nofactors
 
 # Kaiser Criterion
 sink(file = "C:/Users/heraa/Documents/University/Doctoral Directed Studies/Guest Lecture/Factor Analysis/Kaiser.txt")
-nofactors = fa.parallel(efadataset[, -c(1, 2, 3, 4, 5)], fm="pa", fa="fa")
+nofactors = fa.parallel(efadataset, fm="pa", fa="fa")
 nofactors
 sink(file = NULL)
 
